@@ -1,0 +1,117 @@
+.gallery {
+  margin-top: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  &__heading {
+    font-family: $font--family;
+    font-weight: 900;
+    font-size: 48px;
+    letter-spacing: 19.2px;
+    line-height: 1;
+    margin-bottom: 70px;
+
+    &::after {
+      content: '';
+      display: block;
+      background-color: $secondary--color;
+      height: 2px;
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    height: 240px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    gap: 100px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__element {
+    height: 100%;
+  }
+
+  &__photo {
+    position: relative;
+    object-fit: fill;
+    height: 240px;
+    width: 350px;
+    z-index: 2;
+  }
+
+  &__dots {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    padding: 0;
+    margin: 33px 0px 54px 0px;
+  }
+
+  &__dot {
+    height: 18px;
+    width: 18px;
+    background-color: $grey--color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__container {
+    width: 350px;
+    height: 240px;
+  }
+
+  &__icon {
+    fill: $grey--color;
+
+    &:hover {
+      cursor: pointer;
+      fill: $secondary--color;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .gallery {
+    &__block {
+      height: 522px;
+    }
+    &__photo {
+      height: 522px;
+      width: 860px;
+    }
+    &__container {
+      width: 860px;
+      height: 522px;
+    }
+  }
+}
+
+@media screen and (min-width: 1420px) {
+  .gallery {
+    margin-top: 284px;
+    &__block {
+      height: 767px;
+    }
+    &__photo {
+      height: 767px;
+      width: 1364px;
+    }
+    &__container {
+      width: 1364px;
+      height: 767px;
+    }
+  }
+}

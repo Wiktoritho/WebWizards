@@ -1,0 +1,19 @@
+.photo {
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  max-width: 100%;
+  min-width: 600px;
+}
+@media screen and (min-width: 900px) {
+  .photo {
+    top: -30px;
+    min-width: 900px;
+  }
+}
+@media screen and (min-width: 1420px) {
+  .photo {
+    top: -100px;
+    min-width: 1410px;
+  }
+}

@@ -1,0 +1,106 @@
+.header {
+    margin: 0 auto;
+    background-color: $primary--color;
+    min-width: 600px;
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100px;
+      max-width: 1420px;
+      min-width: 540px;
+      padding: 0 30px;
+    }
+    &__block {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    &__navigation {
+      display: none;
+    }
+    &__icons {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+    }
+    &__icons-element {
+      height: 29px;
+    }
+    &__icon {
+      fill: $grey--color;
+      transition: fill 0.3s ease;
+    }
+    &__icon:hover {
+      cursor: pointer;
+      fill: $secondary--color;
+    }
+    &__logo {
+      width: 216px;
+      height: 50px;
+    }
+    &__element {
+      width: auto;
+    }
+    &__button {
+      height: 41px;
+      padding: 0 10px;
+      border-style: none;
+      background-color: $primary--color;
+      border-radius: 21px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease,
+        opacity 0.3s ease;
+    }
+    &__button:hover {
+      cursor: pointer;
+      background-color: $primary--color;
+      box-shadow: 0px 5px 10px $tertiary--color;
+      border-radius: 21px;
+      opacity: 1;
+    }
+    &__text {
+      display: inline-block;
+      font-family: $font--family;
+      font-size: 12px;
+      letter-spacing: 4.8px;
+      color: $grey--color;
+      max-height: 14px;
+    }
+    &::after {
+      content: '';
+      display: block;
+      background-color: $secondary--color;
+      height: 4px;
+      width: 100%;
+    }
+  }
+@media screen and (min-width: 900px) {
+  .header {
+    &__container {
+      height: 100px;
+      min-width: 845px;
+    }
+    &__navigation{
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+    }
+  }
+}
+@media screen and (min-width: 1420px) {
+  .header {
+    &__container {
+      max-width: 1920px;
+      min-width: 1000px;
+      padding: 0 140px;
+    }
+    &__block {
+      gap: 60px;
+    }
+    &__button {
+      padding: 0 40px;
+    }
+  }
+}

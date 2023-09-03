@@ -1,0 +1,27 @@
+@media screen and (max-width: 899px) {
+  .hamburger-icon {
+    width: 30px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: $grey--color;
+    transition: transform 0.5s ease;
+  }
+
+  .hamburger-icon:hover .bar {
+    transform: scaleX(1.1);
+    background-color: $secondary--color;
+  }
+}
+@media screen and (min-width: 900px) {
+    .hamburger-icon{
+      display: none;
+    }
+}
